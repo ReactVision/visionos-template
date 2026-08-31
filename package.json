@@ -1,0 +1,30 @@
+{
+  "name": "@reactvision/visionos-template",
+  "version": "0.86.2",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReactVision/visionos-template.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "test": "jest",
+    "version": "0.86.2"
+  },
+  "type": "commonjs",
+  "files": [
+    "template/*",
+    "template.config.js",
+    "postInitScript.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "prettier": "^3.6.2",
+    "semver": "^7.6.3"
+  },
+  "description": "React Native project template with visionOS support, by ReactVision"
+}
