@@ -5,7 +5,12 @@ require Pod::Executable.execute_command('node', ['-p',
     {paths: [process.argv[1]]},
   )', __dir__]).strip
 
-platform :visionos, min_visionos_version_supported
+# ViroReactUI.podspec pins visionos 26.0 — ViroKit calls
+# LayerRenderer.Frame.queryDrawables() and Drawable.computeProjection(viewIndex:)
+# with no availability fallback. min_visionos_version_supported is lower, and
+# CocoaPods then refuses the pod with "required a higher minimum deployment
+# target". 26.0 is the number the ViroReact setup guide documents.
+platform :visionos, '26.0'
 prepare_react_native_project!
 
 linkage = ENV['USE_FRAMEWORKS']
