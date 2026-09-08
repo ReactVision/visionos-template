@@ -21,10 +21,18 @@
 The React Native community template with a `visionos/` folder added, so a new project targets
 iOS, Android and Apple Vision Pro from the same JavaScript.
 
+> **Supported with Expo, for now.** ReactVision's visionOS support is announced for Expo apps: the
+> config plugin, the setup guide and this template are all verified in that shape. A bare React
+> Native app is not supported yet — nothing here is known to break there, but nothing has been
+> verified there either.
+
 ```bash
 npx @react-native-community/cli@latest init MyApp \
-  --template @reactvision/visionos-template
+  --template github:ReactVision/visionos-template
 ```
+
+> The npm form `--template @reactvision/visionos-template` works once the package is published.
+> Until then the GitHub specifier above installs exactly the same thing.
 
 That gives you `android/`, `ios/` and `visionos/`, with
 [`@reactvision/react-native-visionos`](https://github.com/ReactVision/react-native-visionos)
