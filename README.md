@@ -11,7 +11,7 @@
   <a href="https://github.com/ReactVision/visionos-template/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licensed">
   </a>
-  <a href="https://discord.gg/yqqEGUjK">
+  <a href="https://discord.gg/A6TaFNqwVc">
     <img src="https://img.shields.io/discord/774471080713781259?label=Discord" alt="Discord">
   </a>
 </p>
@@ -28,20 +28,26 @@ iOS, Android and Apple Vision Pro from the same JavaScript.
 
 ```bash
 npx @react-native-community/cli@latest init MyApp \
-  --template github:ReactVision/visionos-template
+  --template @reactvision/visionos-template
 ```
 
-> The npm form `--template @reactvision/visionos-template` works once the package is published.
-> Until then the GitHub specifier above installs exactly the same thing.
+> The GitHub form `--template github:ReactVision/visionos-template` installs the same thing, and is
+> the way to get a commit that has not been published yet.
 
 That gives you `android/`, `ios/` and `visionos/`, with
 [`@reactvision/react-native-visionos`](https://github.com/ReactVision/react-native-visionos)
 already in `package.json`.
 
 ```bash
-cd MyApp/visionos && pod install
+cd MyApp/visionos
+bundle install              # once per project
+bundle exec pod install
+cd ..
 npx react-native run-visionos
 ```
+
+For an Expo app, follow ViroReact's visionOS setup guide instead: it uses only this template's
+`visionos/` folder and lets the config plugin wire it up.
 
 ## Adding it to a project you already have
 
@@ -52,12 +58,16 @@ one into a scratch directory and copy the folder across:
 npx @react-native-community/cli@latest init MyApp \
   --template @reactvision/visionos-template \
   --directory visionos-scratch --skip-install
+mv visionos-scratch/visionos ./visionos && rm -rf visionos-scratch
 ```
+
+Use your app's own name for `MyApp`: the generated Xcode project and app folder are named after it.
 
 ## Versions
 
-The template version tracks React Native, and the `visionos/` folder is built for that same
-version. Mixing them is the thing to avoid: a `visionos/` folder from one React Native version
+The template version tracks the React Native line, and the `visionos/` folder is built for that
+same line. Its version number follows `@reactvision/react-native-visionos`, so the `react-native`
+it pins may be an earlier patch of the same line (template 0.86.4 pins `react-native` 0.86.2). Mixing them is the thing to avoid: a `visionos/` folder from one React Native version
 against another needs manual reconciliation, and that reconciliation is exactly what this package
 exists to spare you.
 
