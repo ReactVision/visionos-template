@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.88.1 — unreleased
+## v0.88.1 — 15 November 2026
 
 Moves the template to React Native 0.88.1 and `@reactvision/react-native-visionos` 0.88.1, the line
 Expo SDK 58 and `@reactvision/react-viro` 3.2.0 use. Publish it after the fork's 0.88.1.
