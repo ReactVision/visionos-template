@@ -595,6 +595,7 @@
 					"-DRCT_REMOVE_LEGACY_ARCH=1",
 				);
 				SDKROOT = iphoneos;
+				XROS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Debug;
 		};
@@ -665,6 +666,7 @@
 					"-DRCT_REMOVE_LEGACY_ARCH=1",
 				);
 				SDKROOT = iphoneos;
+				XROS_DEPLOYMENT_TARGET = 26.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
