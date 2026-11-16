@@ -67,13 +67,14 @@ Use your app's own name for `MyApp`: the generated Xcode project and app folder 
 
 The template version tracks the React Native line, and the `visionos/` folder is built for that
 same line. Its version number follows `@reactvision/react-native-visionos`, so the `react-native`
-it pins may be an earlier patch of the same line (template 0.86.4 pins `react-native` 0.86.2). Mixing them is the thing to avoid: a `visionos/` folder from one React Native version
+it pins may be an earlier patch of the same line (template 0.86.4 pinned `react-native` 0.86.2; 0.88.1 pins 0.88.1). Mixing them is the thing to avoid: a `visionos/` folder from one React Native version
 against another needs manual reconciliation, and that reconciliation is exactly what this package
 exists to spare you.
 
 | Template | React Native |
 | --- | --- |
-| `@reactvision/visionos-template@0.86.x` | 0.86.x |
+| `@reactvision/visionos-template@0.88.x` | 0.88.x (Expo SDK 58) |
+| `@reactvision/visionos-template@0.86.x` | 0.86.x (Expo SDK 57) |
 
 ## Using it with ViroReact
 
@@ -87,7 +88,7 @@ scene, the Xcode bundling phase — against the folder this template generates.
   maintained by the React Native community.
 - The `visionos/` folder derives from Callstack's
   [`@callstack/visionos-template`](https://github.com/callstack/react-native-visionos), updated to
-  React Native 0.86 and pointed at ReactVision's fork.
+  React Native 0.88 and pointed at ReactVision's fork.
 
 ## Community
 
